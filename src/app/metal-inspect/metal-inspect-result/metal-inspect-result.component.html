@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-header">
+    <h4>Image Inspect Result</h4>
+  </div>
+  <div class="card-body">
+    <ul class="list-group">
+      <li
+        class="list-group-item list-group-item-action"
+        *ngFor="let metalResult of metalInspectResult">
+
+        {{ metalResult.metal }} - {{ metalResult.percentage + '%'}}
+
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="inspect-dev">
+
+  <h2>Angular 9 FormData</h2>
+  <hr>
+  <br>
+  <div>
+      <form [formGroup] = "inspectForm" (ngSubmit)="onSubmit()">
+        <div>
+          <input type="file" name="inspect" (change)="onFileSelect($event)" />
+        </div>
+        <hr>
+        <div>
+          <button type="submit">Upload</button>
+        </div>
+      </form>
+  </div>
+  <div class="alert alert-danger" *ngIf="error">
+    <h3>Error Occured!</h3>
+    <p>{{ error }}</p>
+  </div>
+
+  <br>
+  <app-metal-inspect-result [metalInspectResult]="metalInspectResult" *ngIf="metalInspectResult.length > 0 && !error"></app-metal-inspect-result>
+</div>
+
